@@ -681,10 +681,28 @@ const currency = [
         console.log(data);
         console.log(result);
       
-        document.getElementById("result").innerHTML=`<h1 class="text-center font-bold">Conveter Result</h1>
-            <h2>Amount: ${amount} ${fromCurrency} </h2>
-             
-            <h2>To: ${toCurrency}</h2>
-            <h2>current Rate: ${conversionRate}</h2>
-            <h2>Result: ${result}</h2>`
+        document.getElementById("result").innerHTML = `
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold text-center text-blue-600 mb-4">Conversion Result</h3>
+                        
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="text-gray-600">Amount:</span>
+                            <span class="font-medium">${amount} ${fromCurrency}</span>
+                        </div>
+                        
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="text-gray-600">To:</span>
+                            <span class="font-medium">${toCurrency}</span>
+                        </div>
+                        
+                        <div class="flex justify-between border-b pb-2">
+                            <span class="text-gray-600">Exchange Rate:</span>
+                            <span class="font-medium">1 ${fromCurrency} = ${conversionRate} ${toCurrency}</span>
+                        </div>
+                        
+                        <div class="flex justify-between pt-2">
+                            <span class="text-gray-600 font-bold">Converted Amount:</span>
+                            <span class="text-xl font-bold text-green-600">${result} ${toCurrency}</span>
+                        </div>
+                    </div>`;
       }
