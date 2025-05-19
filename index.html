@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Currency Converter </title>
+  </head>
+  <body>
+    <div
+      class="flex flex-col items-center justify-center min-h-screen bg-gray-100"
+    >
+      <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-100 text-lg">
+        <h2 class="text-2xl font-bold mb-4 text-center">Currency Converter</h2>
+        <form id="currency-form" class="flex flex-col  p-4">
+          <label for="amount">Amount:</label>
+          <input type="number" id="amount" name="amount" required class="border rounded mb-3"/>
+
+          <label for="from-currency">From:</label>
+          <select id="from-currency" name="from-currency" required class="border rounded mb-3">
+          
+          </select>
+
+          <label for="to-currency">To:</label>
+          <select id="to-currency" name="to-currency" required class="border rounded mb-3">
+          
+          </select>
+
+          <button type="button" onclick="convert()" class=" rounded mb-3 bg-blue-500 p-3">Convert</button>
+        </form>
+        <div id="result" class="flex flex-col  justify-center text-lg p-3">
+           
+        </div>
+
+        
+      </div>
+    </div>
+
+    <script src="script.js"> </script>
+  </body>
+</html>
