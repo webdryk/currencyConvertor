@@ -13,20 +13,29 @@
       <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 w-120 text-lg  border-b-blue-500 border-b-4">
         <h2 class="text-2xl font-bold mb-4 text-center">Currency Converter</h2>
         <form id="currency-form" class="flex flex-col  p-4">
-          <label for="amount">Amount:</label>
-          <input type="number" id="amount" name="amount" required class="border rounded mb-3"/>
+          <label for="amount" class="block text-gray-700 font-medium mb-2">Amount</label>
+                <input type="number" id="amount" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter amount" required>
 
-          <label for="from-currency">From:</label>
-          <select id="from-currency" name="from-currency" required class="border rounded mb-3">
-          
-          </select>
+        <div class="flex gap-5 mt-4">
+            <div class="flex flex-col mb-4 ">
+                 <label for="from-currency" class="block text-gray-700 font-medium mb-2">From: </label>
+                    <select id="from-currency" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                      
+                    </select>
+       
+            </div>
+            <div class="flex flex-col">
+                 
+         <label for="to-currency" class="block text-gray-700 font-medium mb-2">To: </label>
+                    <select id="to-currency" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                      
+                    </select>
+            </div>
+        </div>
 
-          <label for="to-currency">To:</label>
-          <select id="to-currency" name="to-currency" required class="border rounded mb-3">
-          
-          </select>
-
-          <button type="button" onclick="convert()" class=" rounded mb-3 bg-blue-500 p-3 font-bold">Convert</button>
+        <button onclick="convert()" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-lg transition duration-200">
+                Convert
+            </button>
         </form>
         <div id="result" class="p-6 bg-gray-50 border-t">
             <div class="text-center py-8 text-gray-500">
