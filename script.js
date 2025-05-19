@@ -665,7 +665,7 @@ const currency = [
         const amount = document.getElementById("amount").value;
         const fromCurrency = document.getElementById("from-currency").value;
         const toCurrency = document.getElementById("to-currency").value;
-        console.log(amount, fromCurrency, toCurrency);
+        
         apikey = "33a9c4c4e79afd36563061e8";
 
         const response = await fetch(
@@ -678,8 +678,7 @@ const currency = [
         const data = await response.json();
         const conversionRate = data.conversion_rate;
         const result = conversionRate * amount;
-        console.log(data);
-        console.log(result);
+        
       
         document.getElementById("result").innerHTML = `
                     <div class="space-y-4">
